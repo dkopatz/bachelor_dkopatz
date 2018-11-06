@@ -1,0 +1,32 @@
+<!--
+  Generated template for the InvItemsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{object.Kategorie}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+  <ion-row *ngFor="let object of objects" align-items-center>
+    <ion-col col-4>{{object.Produkt}}</ion-col>
+    <ion-col col-3><ion-input type="text" value={{object.Anzahl}} [(ngModel)]="object.Anzahl"></ion-input></ion-col>
+    <ion-col col-2>{{object.Einheit}}</ion-col>
+    <ion-col col-3><ion-input type="text" value={{object.Bemerkung}} [(ngModel)]="object.Bemerkung"></ion-input></ion-col>
+  </ion-row>
+  </ion-grid>
+
+
+  <ion-fab right bottom>
+      <button ion-fab color="dark" (click)="menu(test)">
+        <ion-icon name="add"></ion-icon>
+      </button>
+  </ion-fab>
+</ion-content>

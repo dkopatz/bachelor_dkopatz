@@ -1,0 +1,26 @@
+<!--
+  Generated template for the InventurPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Lebensmittel Inventur</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list>
+    <button ion-item *ngFor="let object of objects" (click)="objectSelected(object)">
+        {{object.Datum}}
+    </button>
+  </ion-list>
+</ion-content>
